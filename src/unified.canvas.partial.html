@@ -1,0 +1,82 @@
+<div id="api" data-name="Unified">
+  <div
+    class="localAccount"
+    aria-label="Sign in with your existing account"
+    role="form"
+  >
+    <div class="intro">
+      <h2>
+        Sign in with your existing account
+      </h2>
+    </div>
+    <div class="error pageLevel" aria-hidden="true" style="display: none;">
+      <p role="alert"></p>
+    </div>
+    <div class="entry">
+      <div class="entry-item">
+        <label for="logonIdentifier">
+          Email Address
+        </label>
+        <div
+          class="error itemLevel"
+          aria-hidden="false"
+          style="display: block;"
+        >
+          <p role="alert" tabindex="1">Please enter your email</p>
+        </div>
+        <input
+          type="email"
+          id="logonIdentifier"
+          name="Username or email address"
+          pattern="^[a-zA-Z0-9.!#$%&amp;’'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          placeholder="Email Address"
+          value=""
+          tabindex="1"
+          class="highlightError"
+        />
+      </div>
+      <div class="entry-item">
+        <div class="password-label">
+          <label for="password">Password</label>
+          <a
+            id="forgotPassword"
+            tabindex="2"
+            href="/teamaloo.onmicrosoft.com/B2C_1_SignUp_SignIn/api/CombinedSigninAndSignup/forgotPassword?csrf_token=ajZVMjk0STFYUEYzQXRKUkgySzYwa0phWDFTaVBlMGt5Z2JvN1NMSVZQdUo2dDd6Z2ZsU2Q3RnpSV2ljZ1V4MGtiejBuOEkrUTJ2N0tDeXcyNVNaMXc9PTsyMDE5LTA4LTE1VDEyOjI5OjA4Ljk4NDkyMjJaO1Erb3pid0dGOEcxdVo4ODl3cmY0VGc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkZmEwMTBhZi1mOGMzLTRkZWItYTMwMi1lNGUyY2Y3YTU2NTUifQ&amp;p=B2C_1_SignUp_SignIn"
+            >Forgot your password?</a
+          >
+        </div>
+        <div class="error itemLevel" aria-hidden="true" style="display: none;">
+          <p role="alert"></p>
+        </div>
+        <input
+          type="password"
+          id="password"
+          name="Password"
+          placeholder="Password"
+          tabindex="1"
+        />
+      </div>
+      <div class="working"></div>
+      <div class="rememberMe">
+        <input id="rememberMe" type="checkbox" name="rememberMe" tabindex="1" />
+        <label for="rememberMe">Keep me signed in</label>
+      </div>
+      <div class="buttons">
+        <button id="next" tabindex="1">Sign in</button>
+      </div>
+    </div>
+    <div class="divider">
+      <h2>OR</h2>
+    </div>
+    <div class="create">
+      <p>
+        Don't have an account?<a
+          id="createAccount"
+          tabindex="1"
+          href="/teamaloo.onmicrosoft.com/B2C_1_SignUp_SignIn/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=ajZVMjk0STFYUEYzQXRKUkgySzYwa0phWDFTaVBlMGt5Z2JvN1NMSVZQdUo2dDd6Z2ZsU2Q3RnpSV2ljZ1V4MGtiejBuOEkrUTJ2N0tDeXcyNVNaMXc9PTsyMDE5LTA4LTE1VDEyOjI5OjA4Ljk4NDkyMjJaO1Erb3pid0dGOEcxdVo4ODl3cmY0VGc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkZmEwMTBhZi1mOGMzLTRkZWItYTMwMi1lNGUyY2Y3YTU2NTUifQ&amp;p=B2C_1_SignUp_SignIn"
+          >Sign up now</a
+        >
+      </p>
+    </div>
+  </div>
+</div>

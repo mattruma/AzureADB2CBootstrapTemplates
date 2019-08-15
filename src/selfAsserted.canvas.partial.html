@@ -1,0 +1,301 @@
+<div class="intro">
+        <p>Please provide the following details.</p>
+    </div>
+    <div id="attributeVerification" role="form">
+        <div class="error pageLevel" id="passwordEntryMismatch" style="display: none;" aria-hidden="true">The password
+            entry fields do not match. Please enter the same password in both fields and try again.</div>
+        <div class="error pageLevel" id="requiredFieldMissing" style="display: none;" aria-hidden="true">A required
+            field is missing. Please fill out all required fields and try again.</div>
+        <div class="error pageLevel" id="fieldIncorrect" style="display: none;" aria-hidden="true">One or more fields
+            are filled out incorrectly. Please check your entries and try again.</div>
+        <div class="error pageLevel" id="claimVerificationServerError" style="display: none;" aria-hidden="true"></div>
+        <div class="attr" id="attributeList">
+            <ul>
+                <li class="TextBox">
+                    <div class="attrEntry validate">
+                        <div>
+                            <div class="verificationInfoText" id="email_intro" style="display: inline;"
+                                aria-hidden="false" role="alert" aria-live="polite"></div>
+                            <div class="verificationInfoText" id="email_info" style="display:none" aria-hidden="true">
+                            </div>
+                            <div class="verificationSuccessText" id="email_success" style="display:none"
+                                aria-hidden="true"></div>
+                            <div class="verificationErrorText error" id="email_fail_retry" style="display:none"
+                                aria-hidden="true">That code is incorrect. Please try again.</div>
+                            <div class="verificationErrorText error" id="email_fail_no_retry" style="display:none"
+                                aria-hidden="true">You've made too many incorrect attempts. Please try again later.
+                            </div>
+                            <div class="verificationErrorText error" id="email_fail_throttled" style="display:none"
+                                aria-hidden="true">There have been too many requests to verify this email address.
+                                Please wait a while, then try again.</div>
+                            <div class="verificationErrorText error" id="email_fail_code_expired" style="display:none"
+                                aria-hidden="true">That code is expired. Please request a new code.</div>
+                            <div class="verificationErrorText error" id="email_fail_server" style="display:none"
+                                aria-hidden="true">We are having trouble verifying your email address. Please enter a
+                                valid email address and try again.</div>
+                            <div class="verificationErrorText error" id="email_incorrect_format" style="display:none"
+                                aria-hidden="true"></div>
+                        </div>
+
+                        <label for="email">Email Address</label>
+
+                        <div class="error itemLevel show" aria-hidden="false">
+                            <p>Please enter a valid email address.</p>
+                        </div>
+
+
+                        <input id="email" class="textInput" type="text" placeholder="Email Address"
+                            pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                            title="Email address that can be used to contact you." required="" aria-required="true"
+                            aria-label="Please enter a valid email address., Email Address">
+
+
+
+
+
+
+
+
+                        <a href="javascript:void(0)" data-help="Email address that can be used to contact you."
+                            class="helpLink tiny">What is this?</a>
+
+                        <div class="buttons verify" claim_id="email">
+                            <div id="email_success_screenreader_msg"
+                                aria-label="E-mail address verified. You can now continue."></div>
+                            <div id="email_ver_wait" class="working" aria-hidden="true" style="display: none;"></div>
+                            <label id="email_ver_input_label" for="email_ver_input" aria-hidden="true"
+                                style="display: none;">Verification code</label>
+                            <input id="email_ver_input" class="verifyInput" type="text" placeholder="Verification code"
+                                style="display:none" aria-hidden="true">
+                            <button id="email_ver_but_send" class="sendButton" type="button" style="display: inline;"
+                                aria-label="Send verification code" aria-hidden="false">Send verification code</button>
+                            <button id="email_ver_but_verify" class="verifyButton" type="button" style="display:none"
+                                aria-label="Verify code" aria-hidden="true">Verify code</button>
+                            <button id="email_ver_but_resend" class="sendButton" type="button" style="display:none"
+                                aria-label="Send new code" aria-hidden="true">Send new code</button>
+
+                            <button id="email_ver_but_edit" class="editButton" type="button" style="display:none"
+                                aria-label="Change e-mail" aria-hidden="true">Change e-mail</button>
+
+                            <button id="email_ver_but_default" class="defaultButton" type="button" style="display:none"
+                                aria-label="Default">Default</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="Password">
+                    <div class="attrEntry">
+
+                        <label for="newPassword">New Password</label>
+
+                        <div class="error itemLevel" aria-hidden="true">
+                            <p>8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase
+                                characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * -
+                                _ + = [ ] { } | \ : ' , ? / ` ~ " ( ) ; .</p>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <input id="newPassword" class="textInput" type="password" placeholder="New Password"
+                            title="Enter new password" required="" aria-required="true"
+                            aria-label="The password must be between 8 and 64 characters., The password must have at least 3 of the following:, a lowercase letter, an uppercase letter, a digit, a symbol, New Password">
+
+                        <a href="javascript:void(0)" data-help="Enter new password" class="helpLink tiny">What is
+                            this?</a>
+                    </div>
+                </li>
+                <li class="Password">
+                    <div class="attrEntry">
+
+                        <label for="reenterPassword">Confirm New Password</label>
+
+                        <div class="error itemLevel" aria-hidden="true">
+                            <p>8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase
+                                characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * -
+                                _ + = [ ] { } | \ : ' , ? / ` ~ " ( ) ; .</p>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password"
+                            title="Confirm new password" required="" aria-required="true"
+                            aria-label="The password must be between 8 and 64 characters., The password must have at least 3 of the following:, a lowercase letter, an uppercase letter, a digit, a symbol, Confirm New Password">
+
+                        <a href="javascript:void(0)" data-help="Confirm new password" class="helpLink tiny">What is
+                            this?</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="continue" disabled="" aria-label="Create">Create</button>
+            <button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
+        </div>
+
+        <div class="verifying-modal">
+            <div id="verifying_blurb"></div>
+        </div>
+    </div>
+
+        <div class="intro">
+            <p>Please provide the following details.</p>
+        </div>
+        <div id="attributeVerification" role="form">
+            <div class="error pageLevel" id="passwordEntryMismatch" style="display: none;" aria-hidden="true">The password entry
+                fields do not match. Please enter the same password in both fields and try again.</div>
+            <div class="error pageLevel" id="requiredFieldMissing" style="display: none;" aria-hidden="true">A required field is
+                missing. Please fill out all required fields and try again.</div>
+            <div class="error pageLevel" id="fieldIncorrect" style="display: none;" aria-hidden="true">One or more fields are
+                filled out incorrectly. Please check your entries and try again.</div>
+            <div class="error pageLevel" id="claimVerificationServerError" style="display: none;" aria-hidden="true"></div>
+            <div class="attr" id="attributeList">
+                <ul>
+                    <li class="TextBox">
+                        <div class="attrEntry validate">
+                            <div>
+                                <div class="verificationInfoText" id="email_intro" style="display: none;" aria-hidden="true"
+                                    role="alert" aria-live="polite"></div>
+                                <div class="verificationInfoText" id="email_info" style="display: none;" aria-hidden="true"
+                                    role="alert" aria-live="polite"></div>
+                                <div class="verificationSuccessText" id="email_success" style="display:none" aria-hidden="true">
+                                </div>
+                                <div class="verificationErrorText error" id="email_fail_retry" style="display: inline;"
+                                    aria-hidden="false" role="alert" aria-live="polite">That code is incorrect. Please try
+                                    again.</div>
+                                <div class="verificationErrorText error" id="email_fail_no_retry" style="display:none"
+                                    aria-hidden="true">You've made too many incorrect attempts. Please try again later.</div>
+                                <div class="verificationErrorText error" id="email_fail_throttled" style="display:none"
+                                    aria-hidden="true">There have been too many requests to verify this email address. Please
+                                    wait a while, then try again.</div>
+                                <div class="verificationErrorText error" id="email_fail_code_expired" style="display: none;"
+                                    aria-hidden="true" role="alert" aria-live="polite">That code is expired. Please request a
+                                    new code.</div>
+                                <div class="verificationErrorText error" id="email_fail_server" style="display:none"
+                                    aria-hidden="true">We are having trouble verifying your email address. Please enter a valid
+                                    email address and try again.</div>
+                                <div class="verificationErrorText error" id="email_incorrect_format" style="display:none"
+                                    aria-hidden="true"></div>
+                            </div>
+        
+                            <label for="email">Email Address</label>
+        
+                            <div class="error itemLevel" aria-hidden="true">
+                                <p>Please enter a valid email address.</p>
+                            </div>
+        
+        
+                            <input id="email" class="textInput" type="text" placeholder="Email Address"
+                                pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                                title="Email address that can be used to contact you." required="" aria-required="true"
+                                aria-label="Please enter a valid email address., Email Address">
+        
+        
+        
+        
+        
+        
+        
+        
+                            <a href="javascript:void(0)" data-help="Email address that can be used to contact you."
+                                class="helpLink tiny">What is this?</a>
+        
+                            <div class="buttons verify" claim_id="email">
+                                <div id="email_success_screenreader_msg"
+                                    aria-label="E-mail address verified. You can now continue." role="alert"></div>
+                                <div id="email_ver_wait" class="working" aria-hidden="true" role="alert" aria-live="polite"
+                                    style="display: none;"></div>
+                                <label id="email_ver_input_label" for="email_ver_input" aria-hidden="false"
+                                    style="display: inline;">Verification code</label>
+                                <input id="email_ver_input" class="verifyInput" type="text" placeholder="Verification code"
+                                    style="display: inline;" aria-hidden="false"
+                                    aria-label="Verification code has been sent to:mattruma@gmail.com, Verification code">
+                                <button id="email_ver_but_send" class="sendButton" type="button" style="display: none;"
+                                    aria-label="Send verification code" aria-hidden="true">Send verification code</button>
+                                <button id="email_ver_but_verify" class="verifyButton" type="button" style="display: inline;"
+                                    aria-label="Verify code" aria-hidden="false">Verify code</button>
+                                <button id="email_ver_but_resend" class="sendButton" type="button" style="display: inline;"
+                                    aria-label="Send new code" aria-hidden="false">Send new code</button>
+        
+                                <button id="email_ver_but_edit" class="editButton" type="button" style="display:none"
+                                    aria-label="Change e-mail" aria-hidden="true">Change e-mail</button>
+        
+                                <button id="email_ver_but_default" class="defaultButton" type="button" style="display:none"
+                                    aria-label="Default">Default</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Password">
+                        <div class="attrEntry">
+        
+                            <label for="newPassword">New Password</label>
+        
+                            <div class="error itemLevel" aria-hidden="true">
+                                <p>8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase
+                                    characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ +
+                                    = [ ] { } | \ : ' , ? / ` ~ " ( ) ; .</p>
+                            </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                            <input id="newPassword" class="textInput" type="password" placeholder="New Password"
+                                title="Enter new password" required="" aria-required="true"
+                                aria-label="The password must be between 8 and 64 characters., The password must have at least 3 of the following:, a lowercase letter, an uppercase letter, a digit, a symbol, New Password">
+        
+                            <a href="javascript:void(0)" data-help="Enter new password" class="helpLink tiny">What is this?</a>
+                        </div>
+                    </li>
+                    <li class="Password">
+                        <div class="attrEntry">
+        
+                            <label for="reenterPassword">Confirm New Password</label>
+        
+                            <div class="error itemLevel" aria-hidden="true">
+                                <p>8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase
+                                    characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ +
+                                    = [ ] { } | \ : ' , ? / ` ~ " ( ) ; .</p>
+                            </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                            <input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password"
+                                title="Confirm new password" required="" aria-required="true"
+                                aria-label="The password must be between 8 and 64 characters., The password must have at least 3 of the following:, a lowercase letter, an uppercase letter, a digit, a symbol, Confirm New Password">
+        
+                            <a href="javascript:void(0)" data-help="Confirm new password" class="helpLink tiny">What is
+                                this?</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button id="continue" disabled="" aria-label="Create">Create</button>
+                <button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
+            </div>
+        
+            <div class="verifying-modal">
+                <div id="verifying_blurb"></div>
+            </div>
+        </div>

@@ -1,0 +1,45 @@
+#page-login .create a {
+  margin-left: 0.3rem;
+}
+
+#page-login .rememberMe {
+  margin-bottom: 15px;
+}
+
+#page-signup #cancel,
+#page-signup #email_ver_but_resend {
+  color: #007bff;
+  background: transparent;
+  border: none;
+}
+
+#page-signup #cancel:hover,
+#page-signup #email_ver_but_resend:hover {
+  color: #0056b3;
+  cursor: pointer;
+}
+
+#page-signup #email_ver_but_send {
+  margin-top: 0.5rem;
+}
+
+#page-signup .helpLink {
+  display: none !important;
+}
+
+#page-signup .buttons.verify {
+  margin-top: 15px;
+}
+
+#page-signup #email_ver_input_label {
+  margin-bottom: 0.5rem;
+  /* display: inline-block !important; */
+}
+
+#page-signup #email_ver_input {
+  margin-bottom: 1rem;
+}
+
+label[aria-hidden="false"] {
+  display: inline-block !important;
+}

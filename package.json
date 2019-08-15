@@ -1,0 +1,22 @@
+{
+  "name": "azureadb2cbootstraptemplates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "yargs": "^13.3.0"
+  },
+  "dependencies": {
+    "gulp-replace": "^1.0.0"
+  }
+}
